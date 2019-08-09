@@ -75,31 +75,18 @@ $heading4Size: 1.00em;
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 0.5em;
+  font-size: 1.5rem;
   z-index: 100;
   background-color: rgba(255,255,255,1);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
   img {
     padding-left: 1em;
     height: 5em;
+    font-size: .75em;
   }
-  .left {
-    float:left;
-    display: flex;
-  }
-  .right {
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-    span {
-    //  padding-left: 1.8em;
-    //  padding-right: 1.8em;
-      font-size: 1.33em;
-    }
-  }
-
 }
