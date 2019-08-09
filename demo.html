@@ -6,8 +6,8 @@
 
 		<title>reveal.js – The HTML Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Mindgrub Revealjs template">
+		<meta name="author" content="Chris Zietlow">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/mindgrub.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -39,6 +39,18 @@
 
 		<div class="reveal">
 
+			<div class='footer'>
+				<div class="left">
+					<img src="assets/mindgrub-logo.png"/>
+				</div>
+				<div class="right">
+					<div class="nav">
+						<span><a href="https://www.drupal.org/u/aczietlow">Chris Zietlow</a></span>
+						<span><a href="http://aczietlow.github.io/behat/">Intro to Behat</a></span>
+						<span><a href="https://twitter.com/aczietlow">@aczietlow</a></span>
+					</div>
+				</div>
+			</div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
@@ -395,6 +407,12 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</div>
 
+		<!-- Because I'm a scrub and still use jquery. -->
+		<script src="lib/js/jquery-3.3.1.min.js"></script>
+
+		<!-- Custom slide configuration. -->
+		<script src="js/mindgrub.js"></script>
+
 		<script src="js/reveal.js"></script>
 
 		<script>
@@ -419,6 +437,12 @@ Reveal.addEventListener( 'customevent', function() {
 				]
 			});
 
+		</script>
+		<script>
+			// Displayed upon load, hides when slide changes.
+			Reveal.addEventListener('slidechanged', function(event) {
+				document.querySelector('.reveal .footer').style.display = 'none';
+			});
 		</script>
 
 	</body>
